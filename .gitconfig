@@ -1,0 +1,7 @@
+[user]
+	name = treby
+	email = treby@atelier-nodoka.net
+[color]
+	ui = true
+[core]
+	excludesfile = /Users/treby/.gitignore
