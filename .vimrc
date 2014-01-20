@@ -1,6 +1,9 @@
 set nocompatible
 
 syntax on
+set modelines=1
+set modeline
+
 set ts=4
 set sw=4
 set autoindent

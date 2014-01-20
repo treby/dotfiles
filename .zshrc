@@ -46,4 +46,4 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/.cabal/bin:$HOME/.rbenv/shims:$PATH"
