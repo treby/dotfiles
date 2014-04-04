@@ -1,6 +1,7 @@
 set nocompatible
 
 syntax on
+set title
 set modelines=1
 set modeline
 
