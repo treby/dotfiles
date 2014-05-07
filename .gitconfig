@@ -4,4 +4,4 @@
 [color]
 	ui = true
 [core]
-	excludesfile = /Users/treby/.gitignore
+	excludesfile = ~/.gitignore
