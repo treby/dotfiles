@@ -10,6 +10,10 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundleCheck
 
+filetype off
+set encoding=utf-8
+set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,sjis
+set backspace=2
 syntax on
 set title
 set modelines=1
