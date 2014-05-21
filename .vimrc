@@ -27,6 +27,12 @@ set et
 set number
 set lcs=tab:>.,trail:_,extends:\
 set list
+set nowrap
+set whichwrap=h,l
+set nowrapscan
+set incsearch
+set hlsearch
+set ignorecase
 highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
 highlight JpSpace cterm=underline ctermfg=7 guifg=7
 au BufRead,BufNew * match JpSpace /　/
