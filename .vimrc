@@ -8,6 +8,7 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc'
+NeoBundle 'ruby-matchit'
 NeoBundleCheck
 
 filetype off
@@ -52,3 +53,5 @@ set mouse=a
 set ttymouse=xterm2
 set nomousefocus
 set mousehide
+
+set history=10000
