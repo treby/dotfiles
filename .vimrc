@@ -34,6 +34,7 @@ set nowrapscan
 set incsearch
 set hlsearch
 set ignorecase
+set showcmd
 highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
 highlight JpSpace cterm=underline ctermfg=7 guifg=7
 au BufRead,BufNew * match JpSpace /　/
