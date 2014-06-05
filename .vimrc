@@ -1,4 +1,6 @@
 set nocompatible
+set encoding=utf-8
+set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,sjis
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
@@ -12,10 +14,8 @@ NeoBundle 'ruby-matchit'
 NeoBundleCheck
 
 filetype off
-set encoding=utf-8
-set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,sjis
-set backspace=2
 syntax on
+set backspace=2
 set title
 set modelines=1
 set modeline
@@ -50,9 +50,10 @@ nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> ,fc :foldclose<CR>
 
 " mouse settings
-set mouse=a
-set ttymouse=xterm2
-set nomousefocus
-set mousehide
-
+if has('mouse')
+  set mouse=a
+  set ttymouse=xterm2
+  set nomousefocus
+  set mousehide
+endif
 set history=10000
