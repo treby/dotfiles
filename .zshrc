@@ -45,5 +45,5 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-eval "$(rbenv init -)"
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 export PATH="$HOME/.cabal/bin:$HOME/.rbenv/shims:$PATH"
