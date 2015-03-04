@@ -1,6 +1,7 @@
 set nocompatible
 set encoding=utf-8
 set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,sjis
+set viminfo='20,\"1000
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
