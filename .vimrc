@@ -1,6 +1,8 @@
 set nocompatible
 set encoding=utf-8
 set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,sjis
+set fileformat=unix
+set fileformats=unix,mac,dos
 set viminfo='20,\"1000
 
 if has('vim_starting')
