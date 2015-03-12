@@ -4,6 +4,8 @@ set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,sjis
 set fileformat=unix
 set fileformats=unix,mac,dos
 set viminfo='20,\"1000
+filetype off
+filetype plugin indent off
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim
@@ -16,9 +18,12 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'ruby-matchit'
+
+" カッコを自動補完
+NeoBundle 'tpope/vim-endwise'
+
 NeoBundleCheck
 
-filetype off
 syntax on
 set backspace=2
 set title
@@ -44,6 +49,7 @@ set showmatch
 highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
 highlight JpSpace cterm=underline ctermfg=7 guifg=7
 au BufRead,BufNew * match JpSpace /　/
+
 
 let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
@@ -107,4 +113,7 @@ if has('mouse')
   set nomousefocus
   set mousehide
 endif
+filetype plugin indent on
+autocmd! FileType ruby setlocal sw=2 ts=2
+autocmd! FileType eruby setlocal sw=2 ts=2
 set history=10000
