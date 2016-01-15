@@ -18,6 +18,8 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'ruby-matchit'
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
 
 " カッコを自動補完
 NeoBundle 'tpope/vim-endwise'
@@ -116,4 +118,6 @@ endif
 filetype plugin indent on
 autocmd! FileType ruby setlocal sw=2 ts=2
 autocmd! FileType eruby setlocal sw=2 ts=2
+autocmd! FileType javascript setlocal sw=2 ts=2
+autocmd! FileType jsx setlocal sw=2 ts=2
 set history=10000
