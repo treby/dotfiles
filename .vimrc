@@ -20,6 +20,13 @@ NeoBundle 'Shougo/vimproc'
 NeoBundle 'ruby-matchit'
 NeoBundle 'pangloss/vim-javascript'
 NeoBundle 'mxw/vim-jsx'
+NeoBundle "slim-template/vim-slim"
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'junegunn/vim-easy-align'
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 " カッコを自動補完
 NeoBundle 'tpope/vim-endwise'
@@ -116,6 +123,7 @@ if has('mouse')
   set mousehide
 endif
 filetype plugin indent on
+au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 autocmd! FileType ruby setlocal sw=2 ts=2
 autocmd! FileType eruby setlocal sw=2 ts=2
 autocmd! FileType javascript setlocal sw=2 ts=2
