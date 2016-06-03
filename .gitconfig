@@ -8,3 +8,13 @@
 	editor = vim
 	pager = less -c
 	quotepath = false
+
+[alias]
+	br = branch
+	co = checkout
+	st = status
+	ft = fetch -p
+	delete-merged-branches = !git branch --merged | grep -v \\* | xargs -I % git branch -d %
+
+[grep]
+	lineNumber = true
