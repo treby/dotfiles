@@ -1,3 +1,43 @@
+if &compatible
+  set nocompatible
+endif
+let s:dein_dir = expand('~/.cache/dein')
+let s:dein_repo_dir = s:dein_dir . '/repos/github.com/Shougo/dein.vim'
+
+if &runtimepath !~# '/dein.vim'
+  if !isdirectory(s:dein_repo_dir)
+    execute '!git clone https://github.com/Shougo/dein.vim' s:dein_repo_dir
+  endif
+  execute 'set runtimepath^=' . fnamemodify(s:dein_repo_dir, ':p')
+endif
+
+if dein#load_state(s:dein_dir)
+  call dein#begin(s:dein_dir)
+  call dein#add('Shougo/neocomplete.vim')
+  call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
+  call dein#add('Shougo/neomru.vim')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('ruby-matchit')
+  call dein#add('pangloss/vim-javascript')
+  call dein#add('mxw/vim-jsx')
+  call dein#add('slim-template/vim-slim')
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('junegunn/vim-easy-align')
+  call dein#add('tpope/vim-endwise')
+
+  call dein#end()
+  call dein#save_state()
+endif
+
+if dein#check_install()
+  call dein#install()
+endif
+
+" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
+vmap <Enter> <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
+
 set nocompatible
 set encoding=utf-8
 set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,sjis
@@ -6,32 +46,6 @@ set fileformats=unix,mac,dos
 set viminfo='20,\"1000
 filetype off
 filetype plugin indent off
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim
-  call neobundle#begin(expand('~/.vim/bundle/'))
-  NeoBundleFetch 'Shougo/neobundle.vim'
-  call neobundle#end()
-endif
-NeoBundleFetch 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimproc'
-NeoBundle 'ruby-matchit'
-NeoBundle 'pangloss/vim-javascript'
-NeoBundle 'mxw/vim-jsx'
-NeoBundle "slim-template/vim-slim"
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'junegunn/vim-easy-align'
-" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. gaip)
-nmap ga <Plug>(EasyAlign)
-
-" カッコを自動補完
-NeoBundle 'tpope/vim-endwise'
-
-NeoBundleCheck
 
 syntax on
 set backspace=2
