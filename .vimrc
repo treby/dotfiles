@@ -69,10 +69,9 @@ set hlsearch
 set ignorecase
 set showcmd
 set showmatch
-highlight SpecialKey cterm=NONE ctermfg=7 guifg=7
-highlight JpSpace cterm=underline ctermfg=7 guifg=7
+highlight SpecialKey cterm=NONE ctermfg=gray guifg=gray
+highlight JpSpace cterm=underline ctermfg=gray guifg=gray
 au BufRead,BufNew * match JpSpace /　/
-
 
 let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
