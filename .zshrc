@@ -12,7 +12,7 @@ fi
 
 # Customize to your needs...
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-export PATH="$HOME/.rbenv/shims:$PATH"
+export PATH="$HOME/.rbenv/shims:/usr/local/bin:$PATH"
 export EDITOR=vi
 alias gg='git grep -H --heading --break'
 alias tailf='tail -f'
