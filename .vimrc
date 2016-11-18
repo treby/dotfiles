@@ -17,6 +17,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('Shougo/vimproc.vim', {'build' : 'make'})
   call dein#add('Shougo/neomru.vim')
   call dein#add('Shougo/unite.vim')
+  call dein#add('szw/vim-tags')
   call dein#add('ruby-matchit')
   call dein#add('pangloss/vim-javascript')
   call dein#add('mxw/vim-jsx')
@@ -44,6 +45,7 @@ set fileencodings=utf-8,euc-jp,iso-2022-jp,cp932,sjis
 set fileformat=unix
 set fileformats=unix,mac,dos
 set viminfo='20,\"1000
+set tags=~/ruby.tags
 filetype off
 filetype plugin indent off
 
@@ -137,6 +139,9 @@ if has('mouse')
 endif
 filetype plugin indent on
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
+au BufNewFile,BufRead *.jade set ft=slim
+au BufNewFile,BufRead *.es6 set ft=javascript
+au BufNewFile,BufRead *.rb let g:vim_tags_project_tags_command = "ctags --languages=ruby -f ~/ruby.tags `pwd` 2>/dev/null &"
 autocmd! FileType ruby setlocal sw=2 ts=2
 autocmd! FileType eruby setlocal sw=2 ts=2
 autocmd! FileType javascript setlocal sw=2 ts=2
