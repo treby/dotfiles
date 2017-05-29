@@ -25,6 +25,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('kchmck/vim-coffee-script')
   call dein#add('junegunn/vim-easy-align')
   call dein#add('tpope/vim-endwise')
+  call dein#add('posva/vim-vue')
 
   call dein#end()
   call dein#save_state()
@@ -143,9 +144,11 @@ filetype plugin indent on
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 au BufNewFile,BufRead *.jade set ft=slim
 au BufNewFile,BufRead *.es6 set ft=javascript
+au BufNewFile,BufRead *.vue set ft=vue
 au BufNewFile,BufRead *.rb let g:vim_tags_project_tags_command = "ctags --languages=ruby -f ~/ruby.tags `pwd` 2>/dev/null &"
 autocmd! FileType ruby setlocal sw=2 ts=2
 autocmd! FileType eruby setlocal sw=2 ts=2
 autocmd! FileType javascript setlocal sw=2 ts=2
 autocmd! FileType jsx setlocal sw=2 ts=2
+autocmd! FileType vue setlocal sw=2 ts=2
 set history=10000
