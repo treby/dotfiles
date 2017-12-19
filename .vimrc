@@ -26,6 +26,9 @@ if dein#load_state(s:dein_dir)
   call dein#add('junegunn/vim-easy-align')
   call dein#add('tpope/vim-endwise')
   call dein#add('posva/vim-vue')
+  call dein#add('scrooloose/nerdtree')
+  call dein#add('jistr/vim-nerdtree-tabs')
+  call dein#add('osyo-manga/vim-monster')
 
   call dein#end()
   call dein#save_state()
@@ -81,9 +84,11 @@ au BufRead,BufNew * match JpSpace /　/
 let g:unite_enable_start_insert = 1
 let g:unite_source_history_yank_enable = 1
 let g:unite_source_file_mru_limit = 200
+let g:nerdtree_tabs_open_on_console_startup = 1
+let NERDTreeShowHidden = 1
 nnoremap <silent> ,uy :<C-u>Unite history/yank<CR>
 nnoremap <silent> ,ub :<C-u>Unite buffer<CR>
-nnoremap <silent> ,uf :<C-u>UniteWithBufferDir -buffer-name=files file<CR>
+nnoremap <silent> ,uf :NERDTreeTabsToggle<CR>
 nnoremap <silent> ,ur :<C-u>Unite -buffer-name=register register<CR>
 nnoremap <silent> ,uu :<C-u>Unite file_mru buffer<CR>
 nnoremap <silent> ,fc :foldclose<CR>
