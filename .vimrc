@@ -153,7 +153,9 @@ au BufNewFile,BufRead *.vue set ft=vue
 au BufNewFile,BufRead *.rb let g:vim_tags_project_tags_command = "ctags --languages=ruby -f ~/ruby.tags `pwd` 2>/dev/null &"
 autocmd! FileType ruby setlocal sw=2 ts=2
 autocmd! FileType eruby setlocal sw=2 ts=2
+autocmd! FileType python setlocal sw=2 ts=2
 autocmd! FileType javascript setlocal sw=2 ts=2
 autocmd! FileType jsx setlocal sw=2 ts=2
 autocmd! FileType vue setlocal sw=2 ts=2
+autocmd! FileType html setlocal sw=2 ts=2
 set history=10000
