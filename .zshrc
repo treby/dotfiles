@@ -10,9 +10,10 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
+export GOPATH=$HOME/go
+export PATH="$HOME/.rbenv/shims:/usr/local/bin:/usr/sbin:/sbin:$HOME/Library/Python/3.6/bin:$HOME/google-cloud-sdk/bin:$PATH"
 # Customize to your needs...
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-export PATH="$HOME/.rbenv/shims:/usr/local/bin:/usr/sbin:/sbin:$PATH"
 export EDITOR=vi
 alias gg='git grep -H --heading --break'
 alias tailf='tail -f'
