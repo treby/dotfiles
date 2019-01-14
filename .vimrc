@@ -150,7 +150,7 @@ endif
 filetype plugin indent on
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 au BufNewFile,BufRead *.jade set ft=slim
-au BufNewFile,BufRead *.es6 set ft=javascript
+au BufNewFile,BufRead *.ts set ft=javascript
 au BufNewFile,BufRead *.vue set ft=vue
 au BufNewFile,BufRead *.go set ft=go
 au BufNewFile,BufRead *.rb let g:vim_tags_project_tags_command = "ctags --languages=ruby -f ~/ruby.tags `pwd` 2>/dev/null &"
