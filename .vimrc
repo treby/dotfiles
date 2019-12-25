@@ -30,6 +30,7 @@ if dein#load_state(s:dein_dir)
   call dein#add('jistr/vim-nerdtree-tabs')
   call dein#add('osyo-manga/vim-monster')
   call dein#add('fatih/vim-go')
+  call dein#add('leafgarland/typescript-vim')
   call dein#add('ngmy/vim-rubocop')
 
   call dein#end()
@@ -150,7 +151,6 @@ endif
 filetype plugin indent on
 au BufNewFile,BufRead *.json.jbuilder set ft=ruby
 au BufNewFile,BufRead *.jade set ft=slim
-au BufNewFile,BufRead *.ts set ft=javascript
 au BufNewFile,BufRead *.vue set ft=vue
 au BufNewFile,BufRead *.go set ft=go
 au BufNewFile,BufRead *.rb let g:vim_tags_project_tags_command = "ctags --languages=ruby -f ~/ruby.tags `pwd` 2>/dev/null &"
@@ -158,6 +158,7 @@ autocmd! FileType ruby setlocal sw=2 ts=2
 autocmd! FileType eruby setlocal sw=2 ts=2
 autocmd! FileType yaml setlocal sw=2 ts=2
 autocmd! FileType python setlocal sw=2 ts=2
+autocmd! FileType typescript setlocal sw=2 ts=2
 autocmd! FileType javascript setlocal sw=2 ts=2
 autocmd! FileType jsx setlocal sw=2 ts=2
 autocmd! FileType vue setlocal sw=2 ts=2
