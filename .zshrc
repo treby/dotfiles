@@ -11,7 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 export GOPATH=$HOME/go
-export PATH="$HOME/.rbenv/shims:/usr/local/bin:/usr/sbin:/sbin:$HOME/Library/Python/3.6/bin:$HOME/google-cloud-sdk/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:/usr/local/bin:/usr/sbin:/sbin:$HOME/google-cloud-sdk/bin:$PATH"
 # Customize to your needs...
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 export EDITOR=vi
@@ -19,8 +19,6 @@ alias gg='git grep -H --heading --break'
 alias tailf='tail -f'
 alias rm='command rm'
 
-source /usr/local/bin/virtualenvwrapper.sh
-export WORKON_HOME=~/.virtualenvs
 export MASTER_OPTIONS="--my_file=$HOME/.my.cnf"
 
 PATH="/Users/treby/perl5/bin${PATH:+:${PATH}}"; export PATH;
