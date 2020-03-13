@@ -11,7 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 export GOPATH=$HOME/go
-export PATH="$HOME/.rbenv/shims:/usr/local/bin:/usr/sbin:/sbin:$HOME/google-cloud-sdk/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$HOME/.composer/vendor/bin:/usr/local/bin:/usr/sbin:/sbin:$HOME/google-cloud-sdk/bin:$PATH"
 # Customize to your needs...
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 export EDITOR=vi
@@ -21,6 +21,8 @@ alias rm='command rm'
 
 export MASTER_OPTIONS="--my_file=$HOME/.my.cnf"
 
+PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
+PATH="/usr/local/bin:$PATH"
 PATH="/Users/treby/perl5/bin${PATH:+:${PATH}}"; export PATH;
 PERL5LIB="/Users/treby/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
 PERL_LOCAL_LIB_ROOT="/Users/treby/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
@@ -44,3 +46,5 @@ function peco-select-history() {
 zle -N peco-select-history
 bindkey '^r' peco-select-history
 tmux
+export PATH="/usr/local/opt/php@7.3/bin:$PATH"
+export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
