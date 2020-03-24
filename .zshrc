@@ -11,7 +11,7 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 export GOPATH=$HOME/go
-export PATH="$HOME/.rbenv/shims:$HOME/.composer/vendor/bin:/usr/local/bin:/usr/sbin:/sbin:$HOME/google-cloud-sdk/bin:$PATH"
+export PATH="$HOME/.rbenv/shims:$HOME/.composer/vendor/bin:/usr/local/bin:/usr/sbin:/sbin:$HOME/google-cloud-sdk/bin:$GOPATH/bin:$PATH"
 # Customize to your needs...
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 export EDITOR=vi
