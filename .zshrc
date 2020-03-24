@@ -45,6 +45,13 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
-tmux
 export PATH="/usr/local/opt/php@7.3/bin:$PATH"
 export PATH="/usr/local/opt/php@7.3/sbin:$PATH"
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/treby/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/treby/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/treby/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/treby/google-cloud-sdk/completion.zsh.inc'; fi
+tmux
