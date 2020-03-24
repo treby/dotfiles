@@ -3,3 +3,6 @@
 .bundle
 dump.rdb
 .env
+yarn.lock
+node_modules/*
+logs/*
