@@ -21,6 +21,7 @@ alias rm='command rm'
 
 export MASTER_OPTIONS="--my_file=$HOME/.my.cnf"
 
+PATH="/opt/homebrew/bin:$PATH"
 PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
 PATH="/usr/local/bin:$PATH"
 PATH="/Users/treby/perl5/bin${PATH:+:${PATH}}"; export PATH;
