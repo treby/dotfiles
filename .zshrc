@@ -53,3 +53,4 @@ if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then . "$HOME/google-clou
 if command -v tmux >/dev/null && [ -z "$TMUX" ]; then
   tmux
 fi
+export PATH="$HOME/.local/bin:$PATH"
